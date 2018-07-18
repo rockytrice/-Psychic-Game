@@ -1,4 +1,4 @@
-var computerChoices = ["a", "b", "c", "d", "e", "f", "g"];
+var computerChoices = ["a", "b", "c"];
 
 var wins = 0;
 var losses = 0;
@@ -13,16 +13,25 @@ document.onkeyup = function (event) {
 
     var randomGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-    for (i = 0; i <= 6; i++) {
-        console.log(i);
-        // if (userGuess===randomGuess){
-        //     wins++;
-        
+    if ((userGuess === "a") || (userGuess === "b") || (userGuess === "c")) {
+        if (userGuess === randomGuess) {
+            wins++;
+        } else {
+            losses++;
+        }
+        var html =
+            "<p>Guess what letter i'm thinking of: " + userGuess + "</p>" +
+            "<p>wins: " + wins + "</p>" +
+            "<p>losses: " + losses + "</p>"
+
+
+
+        document.querySelector("#game").innerHTML = html;
+
     }
 
 
-
-
-
 }
+
+
 
