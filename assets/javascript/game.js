@@ -5,7 +5,7 @@ var secretLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",];
 var wins = 0;
 var losses = 0;
 var guessLeft = 9;
-var lettersGuessed = []
+var lettersGuessed = [""]
 
 // function to reset game
 var reset = function () {
