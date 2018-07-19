@@ -11,23 +11,26 @@ var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)]
 // when user presses key, code will run
 document.onkeyup = function (event) {
     var userGuess = event.key;
-    if (userGuess === physicLetter) {
-        wins++;
-    } else {
-        guessLeft--;
-    }
-    if (userGuess === 0) {
-        losses++;
-    }
-    var html =
-        "<h1>The Pyschic Game:" + "</h2>" +
-        "<p>wins: " + wins + "</p>" +
-        "<p>losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + guessLeft + "</p>" +
-        "<p> Your Guesses so far " + userGuess + "</p>"
+    for (i = 0; i < secretLetter.length; i++) {
+        if (userGuess === physicLetter) {
+            wins++;
+        } else {
+            guessLeft--;
+        }
+        if (guessLeft === 0) {
+            losses++;
+        }
+        var html =
+            "<h1>The Pyschic Game:" + "</h2>" +
+            "<p>wins: " + wins + "</p>" +
+            "<p>losses: " + losses + "</p>" +
+            "<p>Guesses Left: " + guessLeft + "</p>" +
+            "<p> Your Guesses so far " + userGuess + "</p>"
 
-    // Set the inner HTML contents of the #game div to our html string
-    document.querySelector("#game").innerHTML = html;
+        // Set the inner HTML contents of the #game div to our html string
+        document.querySelector("#game").innerHTML = html;
+    }
+
 
 };
 
