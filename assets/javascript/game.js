@@ -45,11 +45,11 @@ document.onkeyup = function (event) {
 
 
     var html =
-        "<h1>The Pyschic Game:" + "</h2>" +
+        // "<h1>The Pyschic Game:" + "</h1>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" +
         "<p>Guesses Left: " + guessLeft + "</p>" +
-        "<p> Your Guesses so far " + lettersGuessed + "</p>"
+        "<p> Your Guesses so far: " + lettersGuessed + "</p>"
 
     // Set the inner HTML contents of the #game div to our html string
     document.querySelector("#game").innerHTML = html;

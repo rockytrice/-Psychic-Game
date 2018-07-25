@@ -1,0 +1,27 @@
+
+body{
+    background-image: url("http://www.cahuengapsychic.com/wp-content/uploads/2018/03/space-galaxy-universe.jpg");
+    background-size: cover;
+}
+
+
+.jumbotron {
+    height: 400px;
+    text-align: center;
+    background-color: transparent;
+
+} 
+h1{
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: 'Oleo Script', cursive;
+
+}
+p {
+    font-family: 'Vidaloka', serif;
+    color: white;
+    font-size: 30px;
+}
+#game {
+    text-align: center;
+}
