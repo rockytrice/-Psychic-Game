@@ -25,3 +25,7 @@ p {
 #game {
     text-align: center;
 }
+.btn:not(:disabled):not(.disabled) {
+    background-color: transparent;
+    border-style: none;
+}

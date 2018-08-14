@@ -8,7 +8,7 @@ var guessLeft = 9;
 var lettersGuessed = [""]
 
 // function to reset game
-var reset = function () {
+var reset = function (secretLetter) {
     guessLeft = 9;
     var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)];
     // logs the physic's letter to the console
@@ -57,14 +57,6 @@ document.onkeyup = function (event) {
 
 
 };
-
-
-
-
-
-
-
-
 
 
 
