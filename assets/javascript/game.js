@@ -1,6 +1,9 @@
 // the array for the secret letters
-var secretLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",];
+var secretLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
 
+// randomly selects letter from array
+var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)];
+// console.log("physicLetter: " + physicLetter);
 // creating variables to hold the number of wins, losses, and guesses left
 var wins = 0;
 var losses = 0;
@@ -8,20 +11,17 @@ var guessLeft = 9;
 var lettersGuessed = [""]
 
 // function to reset game
-var reset = function (secretLetter) {
+var reset = function () {
     guessLeft = 9;
     var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)];
     // logs the physic's letter to the console
-    console.log("physicLetter" + physicLetter);
+    console.log("physicLetter: " + physicLetter);
 
 }
 
-
-// randomly selects letter from array
-var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)];
-
 // when user presses key, code will run
 document.onkeyup = function (event) {
+    var physicLetter = secretLetter[Math.floor(Math.random() * secretLetter.length)];
     // show's the user's guess
     var userGuess = event.key;
     // pushes the letters that the user has already guest into an array and shows it on the page
@@ -40,10 +40,6 @@ document.onkeyup = function (event) {
         lettersGuessed =[];
         reset();
     }
-        
-
-
-
     var html =
         // "<h1>The Pyschic Game:" + "</h1>" +
         "<p>wins: " + wins + "</p>" +
@@ -58,9 +54,8 @@ document.onkeyup = function (event) {
 
 };
 
-
-
-function newFunction() {
-    guessLeft.reset();
-}
+// function newFunction() {
+    
+//     guessLeft.reset();
+// }
 
